@@ -1,5 +1,4 @@
-import CallesScreen from "@/screens/CallesScreen"
-
+import CallesScreen from '@/screens/CallesScreen'
 
 const CallsPage = () => {
   return (

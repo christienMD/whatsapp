@@ -4,7 +4,7 @@ import { TouchableOpacity } from "react-native";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 import Colors from "@/constants/Colors";
 
-const MainLayoutHeaderRight = () => {
+const ChatHeaderRight = () => {
   return (
     <View className="px-3">
       <TouchableOpacity className="flex flex-row gap-6">
@@ -16,21 +16,13 @@ const MainLayoutHeaderRight = () => {
         />
 
         {/* Search Icon */}
-        <MaterialIcons
-          name="search"
-          color={Colors.primary}
-          size={30}
-        />
+        <MaterialIcons name="search" color={Colors.primary} size={30} />
 
         {/* More Icon */}
-        <MaterialIcons
-          name="more-vert"
-          color={Colors.primary}
-          size={30}
-        />
+        <MaterialIcons name="more-vert" color={Colors.primary} size={30} />
       </TouchableOpacity>
     </View>
   );
 };
 
-export default MainLayoutHeaderRight;
+export default ChatHeaderRight;

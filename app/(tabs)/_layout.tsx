@@ -1,15 +1,17 @@
-import React from "react";
-import { Tabs } from "expo-router";
+import { Tabs, useSegments, useNavigation } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import {
   MaterialCommunityIcons,
   MaterialIcons,
   FontAwesome5,
 } from "@expo/vector-icons";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { StyleSheet } from "react-native";
+
+
 import Colors from "@/constants/Colors";
 import MainLayoutTitle from "@/components/MainLayoutTitle";
-import MainLayoutHeaderRight from "@/components/MainLayoutHeaderRight";
+import { AppHeaderRight } from "@/components/AppHeaderRight";
+
 
 const Layout = () => {
   return (
@@ -28,7 +30,7 @@ const Layout = () => {
           headerShadowVisible: false,
           headerTitle: "",
           headerLeft: () => <MainLayoutTitle />,
-          headerRight: () => <MainLayoutHeaderRight />,
+          headerRight: () => <AppHeaderRight />,
         }}
       >
         {/* Chats Tab */}

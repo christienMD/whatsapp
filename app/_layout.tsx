@@ -8,7 +8,7 @@ import { Text, TouchableOpacity } from "react-native";
 import { Platform } from "react-native";
 import "react-native-reanimated";
 
-import '../app/global.css'
+import "../app/global.css";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -60,25 +60,10 @@ function RootLayoutNav() {
         name="verify/[phone]"
         options={{
           headerTitle: "Verify Your Phone Number",
-          headerBackTitle: "Edit number",
+          
           headerTitleStyle: { fontSize: 16 },
-          ...(Platform.OS === "android" && {
-            headerLeft: () => (
-              <TouchableOpacity
-                onPress={() => router.back()}
-                style={{
-                  flexDirection: "row",
-                  alignItems: "center",
-                  marginLeft: 6,
-                }}
-              >
-                <Ionicons name="arrow-back" size={24} color="#007AFF" />
-                <Text style={{ marginLeft: 3, color: "#007AFF" }}>
-                  Edit number
-                </Text>
-              </TouchableOpacity>
-            ),
-          }),
+          headerBackVisible: false,
+          headerTitleAlign: 'center'
         }}
       />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
