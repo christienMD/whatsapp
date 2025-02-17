@@ -8,6 +8,8 @@ import { Text, TouchableOpacity } from "react-native";
 import { Platform } from "react-native";
 import "react-native-reanimated";
 
+import '../app/global.css'
+
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
