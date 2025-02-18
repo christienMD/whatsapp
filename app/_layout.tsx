@@ -9,7 +9,7 @@ import "../app/global.css";
 
 export {
   // Catch any errors thrown by the Layout component.
-  ErrorBoundary
+  ErrorBoundary,
 } from "expo-router";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -40,7 +40,6 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
@@ -57,13 +56,19 @@ function RootLayoutNav() {
         name="verify/[phone]"
         options={{
           headerTitle: "Verify Your Phone Number",
-          
+
           headerTitleStyle: { fontSize: 16 },
           headerBackVisible: false,
-          headerTitleAlign: 'center'
+          headerTitleAlign: "center",
         }}
       />
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="archived"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 }
