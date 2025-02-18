@@ -13,19 +13,19 @@ interface HeaderIconButtonProps {
   type?: "material" | "community";
 }
 
-export const HeaderIconButton = ({ 
-  iconName, 
-  size = 24, 
+export const HeaderIconButton = ({
+  iconName,
+  size = 27,
   onPress,
-  type = "material" 
+  type = "material",
 }: HeaderIconButtonProps) => {
   if (type === "material") {
     return (
       <TouchableOpacity onPress={onPress} className="px-2">
-        <MaterialIcons 
-          name={iconName as MaterialIconName} 
-          size={size} 
-          color={Colors.primary} 
+        <MaterialIcons
+          name={iconName as MaterialIconName}
+          size={size}
+          color="#fff"
         />
       </TouchableOpacity>
     );
@@ -33,10 +33,10 @@ export const HeaderIconButton = ({
 
   return (
     <TouchableOpacity onPress={onPress} className="px-2">
-      <MaterialCommunityIcons 
-        name={iconName as MaterialCommunityIconName} 
-        size={size} 
-        color={Colors.primary} 
+      <MaterialCommunityIcons
+        name={iconName as MaterialCommunityIconName}
+        size={size}
+        color={Colors.white}
       />
     </TouchableOpacity>
   );

@@ -24,7 +24,7 @@ const MainLayoutTitle = ({ defaultTitle = "WhatsApp" }: Props) => {
     }
   };
 
-  return <Text className="text-2xl font-semibold p-2">{getTitle()}</Text>;
+  return <Text className="text-2xl font-bold px-4 text-white">{getTitle()}</Text>;
 };
 
 export default MainLayoutTitle;

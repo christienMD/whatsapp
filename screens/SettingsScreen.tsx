@@ -1,10 +1,11 @@
+import AppScreenContainer from '@/components/AppScreenContainer'
 import { StyleSheet, Text, View } from 'react-native'
 
 const SettingsScreen = () => {
   return (
-    <View>
+    <AppScreenContainer>
       <Text>SettingsScreen</Text>
-    </View>
+    </AppScreenContainer>
   )
 }
 

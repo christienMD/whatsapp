@@ -1,17 +1,10 @@
-import { Tabs, useSegments, useNavigation } from "expo-router";
+import { Tabs } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import {
-  MaterialCommunityIcons,
-  MaterialIcons,
-  FontAwesome5,
-} from "@expo/vector-icons";
-import { StyleSheet } from "react-native";
-
-
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+import { StyleSheet, View, Platform, Text } from "react-native";
 import Colors from "@/constants/Colors";
 import MainLayoutTitle from "@/components/MainLayoutTitle";
 import { AppHeaderRight } from "@/components/AppHeaderRight";
-
 
 const Layout = () => {
   return (
@@ -19,64 +12,108 @@ const Layout = () => {
       <Tabs
         screenOptions={{
           tabBarStyle: {
-            backgroundColor: Colors.background,
+            backgroundColor: Colors.whats_bg,
+            height: 84,
+            paddingBottom: 4,
+            paddingTop: 2,
+            paddingHorizontal: Platform.OS === "ios" ? 24 : 20,
+            borderTopWidth: 0,
           },
-          tabBarActiveBackgroundColor: Colors.background,
-          tabBarActiveTintColor: Colors.primary,
-          tabBarInactiveBackgroundColor: Colors.background,
+          tabBarLabelStyle: {
+            fontSize: 11,
+            fontFamily: Platform.OS === "ios" ? "System" : "Roboto",
+            fontWeight: "500",
+            color: Colors.white,
+            marginTop: 12,
+          },
+          tabBarActiveBackgroundColor: "transparent",
+          tabBarInactiveBackgroundColor: "transparent",
+          tabBarActiveTintColor: Colors.white,
+          tabBarInactiveTintColor: Colors.white,
           headerStyle: {
-            backgroundColor: Colors.background,
+            backgroundColor: Colors.whats_bg,
           },
           headerShadowVisible: false,
           headerTitle: "",
           headerLeft: () => <MainLayoutTitle />,
           headerRight: () => <AppHeaderRight />,
+          tabBarItemStyle: {
+            paddingVertical: 0,
+            marginHorizontal: 12,
+            height: 80,
+            justifyContent: "center",
+            paddingTop: 6
+          },
         }}
       >
-        {/* Chats Tab */}
         <Tabs.Screen
           name="chats"
           options={{
             title: "Chats",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons
-                name="message-text"
-                size={size}
-                color={color}
-              />
+            tabBarIcon: ({ focused }) => (
+              <View
+                style={[styles.iconContainer, focused && styles.activeIconBg]}
+              >
+                <MaterialCommunityIcons
+                  name="message-text"
+                  size={22}
+                  color={Colors.white}
+                />
+                <View style={styles.unreadBadge}>
+                  <Text style={styles.unreadText}>99+</Text>
+                </View>
+              </View>
             ),
           }}
         />
 
-        {/* Calls Tab */}
         <Tabs.Screen
           name="calls"
           options={{
             title: "Calls",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="phone" size={size} color={color} />
+            tabBarIcon: ({ focused }) => (
+              <View
+                style={[styles.iconContainer, focused && styles.activeIconBg]}
+              >
+                <MaterialCommunityIcons
+                  name="phone"
+                  size={22}
+                  color={Colors.white}
+                />
+              </View>
             ),
           }}
         />
 
-        {/* Updates Tab */}
         <Tabs.Screen
           name="updates"
           options={{
             title: "Updates",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialIcons name="update" size={size} color={color} />
+            tabBarIcon: ({ focused }) => (
+              <View
+                style={[styles.iconContainer, focused && styles.activeIconBg]}
+              >
+                <MaterialIcons name="update" size={22} color={Colors.white} />
+                <View style={styles.updateDot} />
+              </View>
             ),
           }}
         />
 
-        {/* Tools Tab */}
         <Tabs.Screen
           name="tools"
           options={{
             title: "Tools",
-            tabBarIcon: ({ color, size }) => (
-              <MaterialCommunityIcons name="tools" size={size} color={color} />
+            tabBarIcon: ({ focused }) => (
+              <View
+                style={[styles.iconContainer, focused && styles.activeIconBg]}
+              >
+                <MaterialCommunityIcons
+                  name="tools"
+                  size={22}
+                  color={Colors.white}
+                />
+              </View>
             ),
           }}
         />
@@ -86,8 +123,49 @@ const Layout = () => {
 };
 
 const styles = StyleSheet.create({
+  activeIconBg: {
+    backgroundColor: "#252726",
+  },
   container: {
+    backgroundColor: Colors.whats_bg,
     flex: 1,
+  },
+  iconContainer: {
+    alignItems: "center",
+    borderRadius: 20,
+    height: 36,
+    justifyContent: "center",
+    marginBottom: 4,
+    width: 60,
+    marginTop: 12
+  },
+  unreadBadge: {
+    alignItems: "center",
+    backgroundColor: Colors.whats_green,
+    borderRadius: 10,
+    height: 18,
+    justifyContent: "center",
+    minWidth: 20,
+    paddingHorizontal: 4,
+    position: "absolute",
+    right: -8,
+    top: 0,
+  },
+  unreadText: {
+    color: Colors.whats_bg,
+    fontSize: 11,
+    fontWeight: "600",
+    includeFontPadding: false,
+    textAlign: "center",
+  },
+  updateDot: {
+    backgroundColor: Colors.whats_green,
+    borderRadius: 5,
+    height: 10,
+    position: "absolute",
+    right: 10,
+    top: 5,
+    width: 10,
   },
 });
 
