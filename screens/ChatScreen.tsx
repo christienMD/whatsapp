@@ -5,10 +5,14 @@ import { defaultStyles } from "@/constants/Styles";
 import ChatRow from "@/components/ChatRow";
 import Colors from "@/constants/Colors";
 import AppScreenContainer from "@/components/AppScreenContainer";
+import CategoryTabs from "@/components/CategoryTabs";
+import ArchiveRow from "@/components/ArchiveRow";
 
 const ChatScreen = () => {
   return (
     <AppScreenContainer>
+      <CategoryTabs />
+      <ArchiveRow />
       <FlatList
         scrollEnabled={false}
         data={chats}
@@ -21,4 +25,3 @@ const ChatScreen = () => {
 
 export default ChatScreen;
 
-const styles = StyleSheet.create({});

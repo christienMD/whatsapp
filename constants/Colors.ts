@@ -7,6 +7,7 @@ export default {
   gray: "#6E6E73",
   lightGray: "#DCDCE2",
   green: "#4FEE57",
+  alert_green: '#0A332C',
   lightGreen: "#DBFFCB",
   red: "#EF0827",
   yellow: "#FCC70B",

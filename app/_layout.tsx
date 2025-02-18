@@ -1,18 +1,15 @@
-import { Ionicons } from "@expo/vector-icons";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useFonts } from "expo-font";
-import { Stack, useRouter } from "expo-router";
+import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
-import { Text, TouchableOpacity } from "react-native";
-import { Platform } from "react-native";
 import "react-native-reanimated";
 
 import "../app/global.css";
 
 export {
   // Catch any errors thrown by the Layout component.
-  ErrorBoundary,
+  ErrorBoundary
 } from "expo-router";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -43,7 +40,7 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
-  const router = useRouter();
+  
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
