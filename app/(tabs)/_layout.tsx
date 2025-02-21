@@ -1,10 +1,5 @@
 import { Tabs } from "expo-router";
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from "react-native";
+import { Platform, StyleSheet, Text, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { AppHeaderRight } from "@/components/AppHeaderRight";
@@ -14,11 +9,9 @@ import Colors from "@/constants/Colors";
 import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
 const Layout = () => {
-
   return (
     <GestureHandlerRootView style={styles.container}>
       <MainHeader />
-
       <Tabs
         screenOptions={{
           headerShown: false,
@@ -79,6 +72,21 @@ const Layout = () => {
         />
 
         <Tabs.Screen
+          name="updates"
+          options={{
+            title: "Updates",
+            tabBarIcon: ({ focused }) => (
+              <View
+                style={[styles.iconContainer, focused && styles.activeIconBg]}
+              >
+                <MaterialIcons name="update" size={22} color={Colors.white} />
+                <View style={styles.updateDot} />
+              </View>
+            ),
+          }}
+        />
+
+        <Tabs.Screen
           name="calls"
           options={{
             title: "Calls",
@@ -97,21 +105,6 @@ const Layout = () => {
         />
 
         <Tabs.Screen
-          name="updates"
-          options={{
-            title: "Updates",
-            tabBarIcon: ({ focused }) => (
-              <View
-                style={[styles.iconContainer, focused && styles.activeIconBg]}
-              >
-                <MaterialIcons name="update" size={22} color={Colors.white} />
-                <View style={styles.updateDot} />
-              </View>
-            ),
-          }}
-        />
-
-        <Tabs.Screen
           name="tools"
           options={{
             title: "Tools",
@@ -124,6 +117,7 @@ const Layout = () => {
                   size={22}
                   color={Colors.white}
                 />
+                <View style={styles.updateDot} />
               </View>
             ),
           }}
@@ -178,7 +172,6 @@ const styles = StyleSheet.create({
     top: 5,
     width: 10,
   },
- 
 });
 
 export default Layout;

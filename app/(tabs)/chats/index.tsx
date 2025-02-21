@@ -1,9 +1,7 @@
-import ChatScreen from '@/screens/ChatScreen'
+import ChatScreen from "@/screens/ChatScreen";
 
 const ChatPage = () => {
-  return (
-    <ChatScreen />
-  )
-}
+  return <ChatScreen />;
+};
 
-export default ChatPage
+export default ChatPage;
