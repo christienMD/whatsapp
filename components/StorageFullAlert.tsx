@@ -6,7 +6,7 @@ import Colors from "../constants/Colors";
 const StorageFullAlert = ({ onClose }: { onClose: () => void }) => {
   return (
     <View
-      className={`bg-[#0A332C] flex-row items-center py-2.5 px-4 rounded-xl mx-4 mt-4`}
+      className={`bg-[#0A332C] flex-row items-center py-2.5 px-4 rounded-xl mt-4`}
     >
       <View className="mr-3">
         <MaterialCommunityIcons name="cloud-upload-outline" size={25} color={Colors.green} />

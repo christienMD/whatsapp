@@ -9,6 +9,14 @@ export const chats: Chat[] = [
     msg: "Ullamco nostrud velit reprehenderit exercitation labore laboris consequat ex magna nostrud.",
     read: true,
     unreadCount: 2,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: true,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "16d121b0-bad3-475a-a1d3-57060a25e3c2",
@@ -18,6 +26,14 @@ export const chats: Chat[] = [
     msg: "Commodo tempor consequat elit in sit sint cillum magna laborum laborum veniam ea exercitation quis.",
     read: false,
     unreadCount: 2,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "594d6cfc-5f69-4e63-ba2b-6eb318fc5d7d",
@@ -27,6 +43,14 @@ export const chats: Chat[] = [
     msg: "Labore excepteur reprehenderit deserunt pariatur in cupidatat dolor Lorem nulla elit irure.",
     read: true,
     unreadCount: 1,
+    isFavorite: true,
+    isGroup: false,
+    isLead: true,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "d90b9cac-aca0-4b8f-9ac5-3b7c228e3657",
@@ -36,6 +60,14 @@ export const chats: Chat[] = [
     msg: "Proident cupidatat sint exercitation incididunt enim deserunt cillum irure.",
     read: true,
     unreadCount: 0,
+    isFavorite: false,
+    isGroup: false,
+    isLead: false,
+    isBusiness: true,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: true,
+    isMuted: false
   },
   {
     id: "45ba88b0-3d9e-4ca7-a93a-45b7db9d7100",
@@ -45,6 +77,14 @@ export const chats: Chat[] = [
     msg: "Deserunt mollit qui aute enim sit enim ullamco nostrud velit excepteur culpa in.",
     read: false,
     unreadCount: 0,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: true,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "874933b3-b7ba-47e0-8bcd-40defa550c68",
@@ -54,6 +94,14 @@ export const chats: Chat[] = [
     msg: "Duis et eu commodo nulla in anim elit.",
     read: true,
     unreadCount: 0,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "f09bb250-6e5b-4d98-a849-93e0fdc1a351",
@@ -63,6 +111,14 @@ export const chats: Chat[] = [
     msg: "Commodo pariatur proident et dolor.",
     read: false,
     unreadCount: 2,
+    isFavorite: false,
+    isGroup: false,
+    isLead: true,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "c4ae3078-4df8-4c0d-b55f-73e02622ee0f",
@@ -72,6 +128,14 @@ export const chats: Chat[] = [
     msg: "Ex ea magna exercitation duis aliquip minim pariatur adipisicing.",
     read: false,
     unreadCount: 3,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: true,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "c6650dc2-2fa3-4415-9fb7-239ccc7983d0",
@@ -81,6 +145,14 @@ export const chats: Chat[] = [
     msg: "Qui velit laborum dolore labore dolor est.",
     read: true,
     unreadCount: 1,
+    isFavorite: false,
+    isGroup: false,
+    isLead: false,
+    isBusiness: true,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "a8c98568-690f-43aa-b188-0d13ff10dbde",
@@ -90,6 +162,14 @@ export const chats: Chat[] = [
     msg: "Nisi irure nostrud tempor ex aute aute consectetur reprehenderit velit.",
     read: true,
     unreadCount: 2,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: true,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "9160e9d7-8e66-425f-99a0-dd323d464387",
@@ -99,6 +179,14 @@ export const chats: Chat[] = [
     msg: "Ea consectetur ex ullamco commodo reprehenderit dolore occaecat aute culpa commodo exercitation id.",
     read: false,
     unreadCount: 1,
+    isFavorite: false,
+    isGroup: false,
+    isLead: true,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: true,
+    isMuted: false
   },
   {
     id: "d8da9548-3691-47f1-940a-85f0dba6d470",
@@ -108,6 +196,14 @@ export const chats: Chat[] = [
     msg: "Qui incididunt pariatur do esse pariatur reprehenderit nulla id deserunt magna consequat sint non.",
     read: false,
     unreadCount: 2,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: true,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "349337b0-ada4-4ba1-9899-914913daacc6",
@@ -117,6 +213,14 @@ export const chats: Chat[] = [
     msg: "Dolore proident laborum laborum consequat ea duis ut sunt sint ullamco qui tempor.",
     read: false,
     unreadCount: 0,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: true,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "ddd8aef7-c1c1-4d76-aea1-89c9c43d7491",
@@ -126,6 +230,14 @@ export const chats: Chat[] = [
     msg: "Minim elit ex veniam eiusmod ut.",
     read: true,
     unreadCount: 0,
+    isFavorite: false,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: true,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "a257f2f2-400a-45d2-8f7f-2425535ebbb1",
@@ -135,6 +247,14 @@ export const chats: Chat[] = [
     msg: "In incididunt aliquip elit amet sit laboris est mollit cillum anim amet sit sunt ut.",
     read: true,
     unreadCount: 3,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: true,
+    isMuted: false
   },
   {
     id: "66b9566e-03f7-4c9a-a315-0b1975b3fb6f",
@@ -144,6 +264,14 @@ export const chats: Chat[] = [
     msg: "Mollit consectetur laboris aute adipisicing aute Lorem nostrud sunt.",
     read: false,
     unreadCount: 0,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "89435cc6-9b61-4ed6-bdbe-4915b52ac6f9",
@@ -153,6 +281,14 @@ export const chats: Chat[] = [
     msg: "Ipsum cillum veniam non proident sit anim eu pariatur.",
     read: false,
     unreadCount: 1,
+    isFavorite: false,
+    isGroup: false,
+    isLead: true,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "fb9dac21-4429-4ca9-b39c-1c0a75961930",
@@ -162,6 +298,14 @@ export const chats: Chat[] = [
     msg: "Dolor ex sit cupidatat laboris sint amet ad qui.",
     read: true,
     unreadCount: 0,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: true,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "546830d2-c2b7-48f4-a3e6-d2560615eb5f",
@@ -171,6 +315,14 @@ export const chats: Chat[] = [
     msg: "Aute irure adipisicing exercitation ipsum aliquip mollit magna eu velit magna magna.",
     read: true,
     unreadCount: 1,
+    isFavorite: false,
+    isGroup: false,
+    isLead: false,
+    isBusiness: true,
+    isArchived: true,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "ec99722b-095b-4a44-b945-43b6660d8ede",
@@ -180,6 +332,14 @@ export const chats: Chat[] = [
     msg: "Amet adipisicing duis tempor fugiat sit cillum nisi dolore occaecat pariatur eiusmod tempor.",
     read: false,
     unreadCount: 1,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: true,
+    isMuted: false
   },
   {
     id: "3d8a32e7-590d-4bcd-8600-624e09baac1b",
@@ -189,6 +349,14 @@ export const chats: Chat[] = [
     msg: "Deserunt veniam veniam Lorem mollit sint adipisicing tempor proident.",
     read: true,
     unreadCount: 3,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "8227764e-ea3a-4369-af0e-b692a2475f4e",
@@ -198,6 +366,14 @@ export const chats: Chat[] = [
     msg: "Nisi eu labore quis in.",
     read: false,
     unreadCount: 1,
+    isFavorite: false,
+    isGroup: false,
+    isLead: true,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "f96fc7f8-c6f4-492c-9d9d-111aa4f2d213",
@@ -207,6 +383,14 @@ export const chats: Chat[] = [
     msg: "Cillum mollit duis consequat magna minim officia id enim anim amet enim.",
     read: false,
     unreadCount: 1,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: true,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "a18e2182-fa22-4cea-b84a-e49cefe0bceb",
@@ -216,6 +400,14 @@ export const chats: Chat[] = [
     msg: "Do excepteur non Lorem reprehenderit aute.",
     read: false,
     unreadCount: 3,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: true,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "fe65602a-d1e7-4d02-9275-07c43a69519c",
@@ -225,6 +417,14 @@ export const chats: Chat[] = [
     msg: "Amet ex anim ut aliqua culpa incididunt cillum.",
     read: false,
     unreadCount: 3,
+    isFavorite: false,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: true,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "50a2e86c-d31a-46a1-b3d3-9d3dff98cd82",
@@ -234,6 +434,14 @@ export const chats: Chat[] = [
     msg: "Do irure irure consectetur ullamco officia pariatur excepteur.",
     read: true,
     unreadCount: 0,
+    isFavorite: false,
+    isGroup: false,
+    isLead: true,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: true,
+    isMuted: false
   },
   {
     id: "59c41dca-f2c7-4ed4-9147-01f0f29ba005",
@@ -243,6 +451,14 @@ export const chats: Chat[] = [
     msg: "Culpa cupidatat sunt duis commodo ex aute voluptate ut.",
     read: true,
     unreadCount: 2,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "e7f501e4-a7a1-4395-ab12-a2e6f9ca230c",
@@ -252,6 +468,14 @@ export const chats: Chat[] = [
     msg: "Magna enim ad nulla nisi.",
     read: true,
     unreadCount: 3,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "0078b06e-3848-47de-b080-de9506b94a60",
@@ -261,6 +485,14 @@ export const chats: Chat[] = [
     msg: "Occaecat ullamco fugiat velit consequat magna veniam do magna qui consequat pariatur ad do.",
     read: true,
     unreadCount: 0,
+    isFavorite: false,
+    isGroup: false,
+    isLead: false,
+    isBusiness: true,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "9dd2b21e-4483-44b1-9ee8-bb10fc82e389",
@@ -270,6 +502,14 @@ export const chats: Chat[] = [
     msg: "Laborum dolor proident nisi Lorem adipisicing aliqua et cupidatat.",
     read: false,
     unreadCount: 0,
+    isFavorite: false,
+    isGroup: false,
+    isLead: true,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: true,
+    isMuted: false
   },
   {
     id: "b70d4d65-0c8b-4b22-ae51-77ebe7932e38",
@@ -279,6 +519,14 @@ export const chats: Chat[] = [
     msg: "Aute deserunt irure nisi occaecat nostrud do ex dolor veniam exercitation.",
     read: true,
     unreadCount: 2,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: true,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "ae3e9195-312d-415e-b7c7-f80a938cc0af",
@@ -288,6 +536,14 @@ export const chats: Chat[] = [
     msg: "Qui officia laborum culpa occaecat elit ullamco reprehenderit est nostrud incididunt esse sint ullamco.",
     read: true,
     unreadCount: 3,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: true,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "88dc3545-1899-404f-aee3-58beb0bc33b1",
@@ -297,6 +553,14 @@ export const chats: Chat[] = [
     msg: "Qui pariatur ad cupidatat adipisicing occaecat sunt quis ut elit.",
     read: false,
     unreadCount: 3,
+    isFavorite: false,
+    isGroup: false,
+    isLead: false,
+    isBusiness: true,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: true
   },
   {
     id: "75463d91-03b1-4c39-b552-7e72e4407161",
@@ -306,6 +570,14 @@ export const chats: Chat[] = [
     msg: "Ut in occaecat eiusmod sit elit incididunt.",
     read: false,
     unreadCount: 3,
+    isFavorite: true,
+    isGroup: false,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: true,
+    isMuted: false
   },
   {
     id: "47e33b3c-6224-476e-860e-78f20b035b8f",
@@ -315,6 +587,14 @@ export const chats: Chat[] = [
     msg: "Dolor Lorem dolor velit sit quis id in.",
     read: false,
     unreadCount: 0,
+    isFavorite: false,
+    isGroup: true,
+    isLead: false,
+    isBusiness: false,
+    isArchived: false,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
   },
   {
     id: "ef88fc0d-50d0-4efb-bea9-489ce7babd57",
@@ -324,7 +604,13 @@ export const chats: Chat[] = [
     msg: "Do aliqua proident commodo qui cupidatat elit laborum proident reprehenderit sint proident aute amet adipisicing.",
     read: true,
     unreadCount: 3,
-  },
+    isFavorite: false,
+    isGroup: false,
+    isLead: true,
+    isBusiness: false,
+    isArchived: true,
+    isCommunity: false,
+    isBroadcast: false,
+    isMuted: false
+  }
 ];
-
-
