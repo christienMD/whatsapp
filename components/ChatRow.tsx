@@ -10,13 +10,15 @@ import { Link } from "expo-router";
 import { format } from "date-fns";
 import { Chat } from "@/entities";
 import Colors from "@/constants/Colors";
+import UnreadBadge from "./UnreadBadge";
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
 
 interface Props {
   chat: Chat;
 }
 
 const ChatRow = ({
-  chat: { img, from, id, msg, read, date, unreadCount },
+  chat: { img, from, id, msg, read, date, unreadCount, isMuted },
 }: Props) => {
   return (
     <Link href={`/`} asChild>
@@ -42,9 +44,23 @@ const ChatRow = ({
               {msg.length > 20 ? `${msg.substring(0, 18)}...` : msg}
             </Text>
           </View>
-          <Text className="text-gray-500 self-start">
-            {format(new Date(date), "MM.dd.yy")}
-          </Text>
+          <View className="items-end self-start gap-1">
+            <Text className={`${!read ? "text-green-500" : "text-gray-500"}`}>
+              {format(new Date(date), "MM.dd.yy")}
+            </Text>
+            <View className="flex-row items-center">
+              {isMuted && (
+                <View className="mr-1">
+                  <MaterialCommunityIcons
+                    name="volume-mute"
+                    size={25}
+                    color={Colors.gray}
+                  />
+                </View>
+              )}
+              <UnreadBadge count={unreadCount || 0} />
+            </View>
+          </View>
         </View>
       </TouchableHighlight>
     </Link>
