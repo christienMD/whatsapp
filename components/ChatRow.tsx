@@ -21,7 +21,7 @@ const ChatRow = ({
   chat: { img, from, id, msg, read, date, unreadCount, isMuted },
 }: Props) => {
   return (
-    <Link href={`/`} asChild>
+    <Link href={`/(tabs)/chats/${id}`} asChild>
       <TouchableHighlight
         activeOpacity={0.8}
         underlayColor={Colors.whats_bg}

@@ -28,11 +28,11 @@ const ChatScreen = () => {
   };
 
   const handleMetaPress = () => {
-    // Handle Meta logo
+    // Handle Meta logo when clicked on
   };
 
   const handleNewChat = () => {
-    // Handle new chat creation
+    // Handle the new chat creation
   };
 
   const showArchiveRow = activeTab !== "Archived";
