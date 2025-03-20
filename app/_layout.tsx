@@ -4,6 +4,7 @@ import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
+import QueryProvider from "@/components/providers/QueryProvider";
 
 import "../app/global.css";
 
@@ -41,34 +42,36 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen
-        name="otp"
-        options={{
-          headerTitle: "Enter Your Phone Number",
-          headerBackVisible: true,
-          headerTitleAlign: "center",
-          headerTitleStyle: { fontSize: 16 },
-        }}
-      />
-      <Stack.Screen
-        name="verify/[phone]"
-        options={{
-          headerTitle: "Verify Your Phone Number",
+    <QueryProvider>
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="otp"
+          options={{
+            headerTitle: "Enter Your Phone Number",
+            headerBackVisible: true,
+            headerTitleAlign: "center",
+            headerTitleStyle: { fontSize: 16 },
+          }}
+        />
+        <Stack.Screen
+          name="verify/[phone]"
+          options={{
+            headerTitle: "Verify Your Phone Number",
 
-          headerTitleStyle: { fontSize: 16 },
-          headerBackVisible: false,
-          headerTitleAlign: "center",
-        }}
-      />
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      <Stack.Screen
-        name="archived"
-        options={{
-          headerShown: false,
-        }}
-      />
-    </Stack>
+            headerTitleStyle: { fontSize: 16 },
+            headerBackVisible: false,
+            headerTitleAlign: "center",
+          }}
+        />
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="archived"
+          options={{
+            headerShown: false,
+          }}
+        />
+      </Stack>
+    </QueryProvider>
   );
 }
