@@ -6,10 +6,8 @@ import ChatRow from "@/components/ChatRow";
 import { useArchivedChats } from "@/hooks/useChats";
 
 const ArchivedChatScreen = () => {
-  // Use a custom hook to fetch archived chats from Supabase
   const { data: archivedChats, isLoading, error } = useArchivedChats();
 
-  // Loading and error states
   if (isLoading) {
     return (
       <View style={styles.container}>

@@ -35,14 +35,21 @@ const ChatScreen = () => {
 
   const showArchiveRow = activeTab !== "Archived";
 
-  // Loading and error states after all hooks are defined
-  if (isLoading) {
-    return <ActivityIndicator />;
+ if (isLoading) {
+    return (
+      <View style={styles.mainContainer}>
+        <ActivityIndicator size="large" color={Colors.primary} />
+      </View>
+    );
   }
 
   if (error) {
-    return <Text>Failed to fetch chats: {error.message}</Text>;
-  }
+      return (
+        <View style={styles.mainContainer}>
+          <Text style={styles.errorText}>Failed to load archived chats: {error.message}</Text>
+        </View>
+      );
+    }
 
   return (
     <View style={styles.mainContainer}>
@@ -88,4 +95,9 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.whats_bg,
     paddingBottom: 6,
   },
+  errorText: {
+    color: "red",
+    textAlign: "center",
+    margin: 20
+  }
 });

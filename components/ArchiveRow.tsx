@@ -16,7 +16,7 @@ const ArchiveRow = ({ archivedChatsCount = 0 }: Props) => {
         underlayColor={Colors.whats_bg}
         className="w-full"
       >
-        <View className="w-full flex-row items-center justify-between px-4 py-3">
+        <View className="w-full flex-row items-center justify-between py-3">
           <View className="flex-row items-center gap-4">
             <MaterialIcons name="archive" size={24} color={Colors.white} />
             <Text className="text-lg font-bold text-white">Archived</Text>

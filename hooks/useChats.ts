@@ -9,6 +9,8 @@ export const useChatList = (categoryTab: CategoryTabName = 'All') => {
     queryKey: ['chats', categoryTab],
     queryFn: async () => {
       let query = supabase.from('chats').select('*');
+    //  const isRead = !unread_count || unread_count === 0;
+
       
       if (categoryTab !== 'Archived') {
         // For all non-archived tabs, we don't want archived chats
@@ -20,7 +22,7 @@ export const useChatList = (categoryTab: CategoryTabName = 'All') => {
           query = query.eq('is_archived', true);
           break;
         case 'Unread':
-          query = query.eq('read', false);
+            query = query.gt('unread_count', 0);
           break;
         case 'Favorites':
           query = query.eq('is_favorite', true);
