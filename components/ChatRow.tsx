@@ -45,7 +45,7 @@ const ChatRow = ({
           />
           <View className="flex-1">
             <Text
-              className={`text-lg font-bold ${
+              className={`text-lg font-bold line-clamp-1 ${
                 isRead ? "text-white" : "text-white"
               }`}
             >

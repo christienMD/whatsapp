@@ -9,7 +9,6 @@ export const useChatList = (categoryTab: CategoryTabName = 'All') => {
     queryKey: ['chats', categoryTab],
     queryFn: async () => {
       let query = supabase.from('chats').select('*');
-    //  const isRead = !unread_count || unread_count === 0;
 
       
       if (categoryTab !== 'Archived') {

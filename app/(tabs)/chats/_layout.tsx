@@ -9,13 +9,16 @@ const Layout = () => {
         name="index"
         options={{
           headerShown: false,
+          headerTitle: () => <View></View>
         }}
       />
       <Stack.Screen
         name="[id]"
         options={{
           title: "",
-          headerTitle: () => <View></View>,
+          headerTitle: () => <View>
+            
+          </View>,
         }}
       />
     </Stack>
