@@ -1,27 +1,43 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
-import React, { useMemo } from "react";
-import { chats } from "@/assets/data/chats";
+import { FlatList, StyleSheet, Text, View, ActivityIndicator } from "react-native";
+import React from "react";
 import Colors from "@/constants/Colors";
 import AppScreenContainer from "@/components/AppScreenContainer";
 import ChatRow from "@/components/ChatRow";
+import { useArchivedChats } from "@/hooks/useChats";
 
 const ArchivedChatScreen = () => {
-  const archivedChats = useMemo(() => {
-    return chats.filter((chat) => chat.isArchived);
-  }, []);
+  // Use a custom hook to fetch archived chats from Supabase
+  const { data: archivedChats, isLoading, error } = useArchivedChats();
+
+  // Loading and error states
+  if (isLoading) {
+    return (
+      <View style={styles.container}>
+        <ActivityIndicator size="large" color={Colors.primary} />
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.errorText}>Failed to load archived chats: {error.message}</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.container}>
       <AppScreenContainer>
         <View style={styles.headerContainer}>
           <Text className="text-center text-neutral-400 text-sm">
-            These chats stay archived when new messages are recieved. Tap to
+            These chats stay archived when new messages are received. Tap to
             change
           </Text>
         </View>
         <FlatList
           scrollEnabled={false}
-          data={archivedChats}
+          data={archivedChats || []}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => <ChatRow chat={item} />}
           ListEmptyComponent={() => (
@@ -55,4 +71,9 @@ const styles = StyleSheet.create({
     color: "#9ca3af",
     fontSize: 18,
   },
+  errorText: {
+    color: "red",
+    textAlign: "center",
+    margin: 20
+  }
 });

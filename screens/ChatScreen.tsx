@@ -1,6 +1,7 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
-import React, { useState, useMemo } from "react";
-import { chats } from "@/assets/data/chats";
+import React, { useState } from "react";
+import { ActivityIndicator, FlatList, StyleSheet, Text, View } from "react-native";
+import { useChatList, useArchivedCount } from "@/hooks/useChats";
+import { CategoryTabName } from "@/types/index-d";
 import Colors from "@/constants/Colors";
 import AppScreenContainer from "@/components/AppScreenContainer";
 import CategoryTabs from "@/components/CategoryTabs";
@@ -8,21 +9,18 @@ import ArchiveRow from "@/components/ArchiveRow";
 import StorageFullAlert from "@/components/StorageFullAlert";
 import ChatRow from "@/components/ChatRow";
 import ChatScreenFloatingAction from "@/components/ChatScreenFloatingAction";
-import { CategoryTabName } from "@/types/index-d";
-import { chatFilters } from "@/utils/chatFilter";
 
 const ChatScreen = () => {
+  // All hooks must be at the top level
   const [showStorageAlert, setShowStorageAlert] = useState(true);
   const [activeTab, setActiveTab] = useState<CategoryTabName>("All");
-
-  const filteredChats = useMemo(() => {
-    return chatFilters(chats, activeTab);
-  }, [activeTab]);
-
-  const archivedChatsCount = useMemo(() => {
-    return chats.filter(chat => chat.isArchived).length;
-  }, []);
-
+  
+  // Pass the activeTab to our hook for server-side filtering
+  const { data: chats, isLoading, error } = useChatList(activeTab);
+  
+  // Get archived count in a separate query
+  const { data: archivedChatsCount = 0 } = useArchivedCount();
+  
   const handleTabChange = (tabName: CategoryTabName) => {
     setActiveTab(tabName);
   };
@@ -37,6 +35,15 @@ const ChatScreen = () => {
 
   const showArchiveRow = activeTab !== "Archived";
 
+  // Loading and error states after all hooks are defined
+  if (isLoading) {
+    return <ActivityIndicator />;
+  }
+
+  if (error) {
+    return <Text>Failed to fetch chats: {error.message}</Text>;
+  }
+
   return (
     <View style={styles.mainContainer}>
       <AppScreenContainer>
@@ -47,13 +54,11 @@ const ChatScreen = () => {
         </View>
         <CategoryTabs activeTab={activeTab} onTabChange={handleTabChange} />
         {showArchiveRow && (
-          <ArchiveRow
-            archivedChatsCount={archivedChatsCount}
-          />
+          <ArchiveRow archivedChatsCount={archivedChatsCount} />
         )}
         <FlatList
           scrollEnabled={false}
-          data={filteredChats}
+          data={chats || []}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => <ChatRow chat={item} />}
           ListEmptyComponent={() => (

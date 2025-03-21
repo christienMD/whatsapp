@@ -16,31 +16,21 @@ const ArchiveRow = ({ archivedChatsCount = 0 }: Props) => {
         underlayColor={Colors.whats_bg}
         className="w-full"
       >
-        <View className="w-full flex-row items-center justify-between pe-6">
-          <View className="flex-row items-center gap-4 px-4 py-3">
+        <View className="w-full flex-row items-center justify-between px-4 py-3">
+          <View className="flex-row items-center gap-4">
             <MaterialIcons name="archive" size={24} color={Colors.white} />
-
-            <View className="flex-1">
-              <Text className="text-lg font-bold text-white">Archived</Text>
-            </View>
+            <Text className="text-lg font-bold text-white">Archived</Text>
           </View>
 
           {archivedChatsCount > 0 && (
-            <Text style={styles.countText} className="text-gray-400 w-full">
+            <View>
               <UnreadBadge count={archivedChatsCount} />
-            </Text>
+            </View>
           )}
         </View>
       </TouchableHighlight>
     </Link>
   );
 };
-
-const styles = StyleSheet.create({
-  countText: {
-    marginRight: 8,
-    fontSize: 12
-  },
-});
 
 export default ArchiveRow;
