@@ -49,8 +49,8 @@ By connecting it to Supabase, I've created a foundation that could be extended w
 
 1. Clone the repo
    ```bash
-   git clone https://github.com/yourusername/whatsapp-clone.git
-   cd whatsapp-clone
+   git clone https://github.com/christienMD/whatsapp.git
+   cd whatsapp
    ```
 
 2. Install dependencies
