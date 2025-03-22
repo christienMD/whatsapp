@@ -11,9 +11,9 @@ By connecting it to Supabase, I've created a foundation that could be extended w
 ## Screenshots
 
 <div align="center">
-  <img src="assets/images/s1.png" alt="Welcome" width="300" />
-  <img src="assets/images/s2.png" alt="Chat List Screen" width="300" />
-  <img src="assets/images/s3.png" alt="Chat List Screen" width="300" />
+  <img src="assets/images/s1.jpg" alt="Welcome" width="300" />
+  <img src="assets/images/s2.jpg" alt="Chat List Screen" width="300" />
+  <img src="assets/images/s3.jpg" alt="Chat List Screen" width="300" />
 </div>
 
 
