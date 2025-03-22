@@ -6,7 +6,7 @@ A beautiful WhatsApp UI clone built with React Native and Expo, connected to a S
 
 This WhatsApp clone project started as a task challenge given to me by my boss to test my React Native skills and evolved into a comprehensive UI study. I wanted to recreate the familiar WhatsApp interface with attention to detail - from the distinctive green accents to the subtle animations that make the app feel responsive.
 
-By connecting it to Supabase, I've created a foundation that could be extended with real-time functionality in the future, but the current focus is on delivering a polished, responsive UI that closely mirrors the original WhatsApp experience.
+By connecting it to Supabase, I've created a foundation that could be extended with real-time functionality in the future, but the current focus is on delivering a polished, responsive UI that closely mirrors the original WhatsApp experience. More feature are coming!! , keep and eye on this repo for more whatsapp feature.
 
 ## Screenshots
 
@@ -14,6 +14,7 @@ By connecting it to Supabase, I've created a foundation that could be extended w
   <img src="assets/images/s1.jpg" alt="Welcome" width="300" />
   <img src="assets/images/s2.jpg" alt="Chat List Screen" width="300" />
   <img src="assets/images/s3.jpg" alt="Chat List Screen" width="300" />
+  <img src="assets/images/s4.jpg" alt="Chat List Screen" width="300" />
 </div>
 
 
