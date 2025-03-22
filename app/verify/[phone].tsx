@@ -13,6 +13,7 @@ const CELL_COUNT = 6;
 
 const Page = () => {
   const { phone } = useLocalSearchParams<{ phone: string }>();
+  const [isVerifying, setIsVerifying] = useState(false);
   const [code, setCode] = useState("");
   const router = useRouter();
 
@@ -25,6 +26,8 @@ const Page = () => {
   useEffect(() => {
     if (code.length === 6) {
       console.log("Verifying code:", code);
+      setIsVerifying(true);
+
       setTimeout(() => {
         if (code === "123456") {
           console.log("Verification successful");
@@ -32,6 +35,7 @@ const Page = () => {
         } else {
           Alert.alert("Error", "Invalid verification code. Please try again.");
           setCode("");
+          setIsVerifying(false);
         }
       }, 1000);
     }
@@ -44,7 +48,7 @@ const Page = () => {
 
   return (
     <View style={styles.container}>
-      <Stack.Screen options={{ title: phone }} />
+      <Stack.Screen options={{ title: phone, headerShown: !isVerifying }} />
       <Text style={styles.legal}>
         We have sent you an SMS with a code to the number above.
       </Text>
@@ -80,6 +84,12 @@ const Page = () => {
           Didn't receive a verification code?
         </Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => router.back()}
+        className="flex-row items-center inline-flex"
+      >
+        <Text style={{ color: Colors.primary }}>Edit number</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -91,7 +101,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: Colors.primary,
-    fontSize: 18,
+    // fontSize: 18,
   },
   cellRoot: {
     alignItems: "center",

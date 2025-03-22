@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const CommunitiesScreen = () => {
+const Page = () => {
   return (
     <View>
-      <Text>CommunitiesScreen</Text>
+      <Text>Single chat Page</Text>
     </View>
   )
 }
 
-export default CommunitiesScreen
+export default Page
 
 const styles = StyleSheet.create({})
